@@ -14,7 +14,6 @@ import { AgentConfig } from "./agent-config.js";
 import { AgentOption } from "./agent-option.js";
 import { AgentSecurityRequest } from "./agent-security-request.js";
 import { AudioContent } from "./audio-content.js";
-import { Content } from "./content.js";
 import { Environment } from "./environment.js";
 import { GenerationConfig } from "./generation-config.js";
 import { ImageContent } from "./image-content.js";
@@ -92,12 +91,6 @@ export type Interaction = {
    */
   updated?: string | undefined;
   /**
-   * Output only. The role of the interaction.
-   *
-   * @deprecated field: This will be removed in a future release, please migrate away from it as soon as possible.
-   */
-  role?: string | undefined;
-  /**
    * System instruction for the interaction.
    */
   system_instruction?: string | undefined;
@@ -169,12 +162,6 @@ export type Interaction = {
    * The input for the interaction.
    */
   input?: InteractionsInput | undefined;
-  /**
-   * Output only. Legacy responses from the model.
-   *
-   * @deprecated field: This will be removed in a future release, please migrate away from it as soon as possible.
-   */
-  outputs?: Array<Content> | undefined;
   /**
    * Concatenated text from the last model output in response to the current request.
    *
